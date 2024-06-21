@@ -1,0 +1,266 @@
+@charset "UTF-8";
+/* Обнулення  */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+a,
+ul,
+li,
+button,
+pre {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1440px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 0 auto;
+}
+
+body {
+  font-family: "League Spartan", sans-serif;
+  background: hsl(180, 52%, 96%);
+  font-weight: 500;
+  font-size: 15px;
+}
+
+header {
+  background: url(../images/bg-header-desktop.svg), hsl(180, 29%, 50%);
+  width: 100%;
+  height: 156px;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+  padding-top: 75px;
+  padding-bottom: 75px;
+  position: relative;
+}
+
+.filters {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1120px;
+  width: 100%;
+  padding: 20px 50px;
+  background: white;
+  border-radius: 10px;
+  position: absolute;
+  top: -35px;
+}
+.filters__names {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 17px;
+}
+.filters__names-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: hsl(180, 31%, 95%);
+  padding-left: 7px;
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+}
+.filters__names-btn p {
+  color: hsl(180, 29%, 50%);
+  font-family: "League Spartan", sans-serif;
+  font-weight: 700;
+}
+.filters__names-btn button {
+  border: none;
+  outline: none;
+  background: hsl(180, 29%, 50%);
+  cursor: pointer;
+  transition: all ease-in-out 0.5s;
+  padding: 8px 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.filters__names-btn button:hover {
+  background: hsl(180, 14%, 20%);
+}
+.filters__clear {
+  color: hsl(180, 8%, 52%);
+  font-family: "League Spartan", sans-serif;
+  font-weight: 700;
+  border: none;
+  outline: none;
+  background: transparent;
+  cursor: pointer;
+  transition: all ease-in-out 0.5s;
+}
+.filters__clear:hover {
+  color: hsl(180, 29%, 50%);
+  border-bottom: 1px solid hsl(180, 29%, 50%);
+}
+
+.job {
+  padding: 32px 60px;
+  max-width: 1120px;
+  width: 100%;
+  background: white;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.job__info {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+.job__info-detail_emloyer {
+  display: flex;
+  align-items: center;
+  margin-bottom: 11px;
+}
+.job__info-detail_emloyer-company {
+  color: hsl(180, 29%, 50%);
+  font-weight: 700;
+  padding-right: 15px;
+}
+.job__info-detail_emloyer-new {
+  border-radius: 30px;
+  padding: 7px 9px;
+  outline: none;
+  border: none;
+  background: hsl(180, 29%, 50%);
+  color: white;
+  font-weight: 700;
+  margin-right: 8px;
+}
+.job__info-detail_emloyer-featured {
+  border-radius: 30px;
+  padding: 7px 9px;
+  outline: none;
+  border: none;
+  background: hsl(180, 14%, 20%);
+  color: white;
+  font-weight: 700;
+}
+.job__info-detail_position {
+  font-weight: 700;
+  margin-bottom: 17px;
+  font-size: 20px;
+  transition: all ease-in-out 0.5s;
+}
+.job__info-detail_position:hover {
+  color: hsl(180, 29%, 50%);
+  cursor: pointer;
+}
+.job__info-detail_about {
+  display: flex;
+  gap: 15px;
+}
+.job__info-detail_about p {
+  color: hsl(180, 8%, 52%);
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.job__info-detail_about p span {
+  display: inline-block;
+  width: 4px;
+  height: 4px;
+  border-radius: 100%;
+  background: hsl(180, 8%, 52%);
+}
+.job__filter {
+  display: flex;
+  gap: 15px;
+}
+.job__filter button {
+  color: hsl(180, 29%, 50%);
+  font-family: "League Spartan", sans-serif;
+  font-weight: 700;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 10px;
+  cursor: pointer;
+  transition: all ease-in-out 0.5s;
+}
+.job__filter button:hover {
+  background: hsl(180, 29%, 50%);
+  color: white;
+  border-radius: 10px;
+}
+
+.job-featured {
+  border-left: 5px solid hsl(180, 29%, 50%);
+}
+
+@media (max-width: 855px) {
+  .main {
+    gap: 57px;
+    padding-top: 72px;
+    padding-bottom: 55px;
+  }
+  .job {
+    padding: 40px 25px 30px 25px;
+  }
+  .job__info {
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+  }
+  .job__info img {
+    position: absolute;
+    top: -75px;
+    left: 0;
+  }
+  .job__info-detail {
+    padding-top: 25px;
+  }
+  .job__info-detail_emloyer {
+    margin-bottom: 15px;
+  }
+}
+@media (max-width: 690px) {
+  header {
+    background: url(../images/bg-header-mobile.svg), hsl(180, 29%, 50%);
+  }
+  .main {
+    padding-top: 90px;
+  }
+  .filters {
+    top: -65px;
+  }
+  .job {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 25px;
+  }
+  .job__info-detail_about {
+    padding-bottom: 20px;
+    border-bottom: 1px solid hsl(180, 8%, 52%);
+  }
+  .job__filter {
+    flex-wrap: wrap;
+  }
+}/*# sourceMappingURL=styles.css.map */

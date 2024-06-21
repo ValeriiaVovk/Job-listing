@@ -1,0 +1,66 @@
+@media (max-width: 855px) {
+    .main {
+        gap: 57px;
+        padding-top: 72px;
+        padding-bottom: 55px;
+    }
+    
+    .job {
+        padding: 40px 25px 30px 25px;
+    
+        &__info {
+            flex-direction: column;
+            align-items: flex-start;
+            position: relative;
+
+            img {
+                position: absolute;
+                top: -75px;
+                left: 0;
+            }
+    
+            &-detail {
+                padding-top: 25px;
+                
+                &_emloyer {
+                    margin-bottom: 15px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 690px) {
+    header {
+        background: url(../images/bg-header-mobile.svg), hsl(180, 29%, 50%);;
+    }
+
+    .main {
+        padding-top: 90px;
+    }
+
+    .filters {
+        top: -65px;
+    }
+    
+    .job {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 25px;
+    
+        &__info {
+    
+            &-detail {
+    
+                &_about {
+                    padding-bottom: 20px;
+                    border-bottom: 1px solid $dark;
+                }
+            }
+        }
+    
+        &__filter {
+            flex-wrap: wrap;
+        }
+    }
+}
